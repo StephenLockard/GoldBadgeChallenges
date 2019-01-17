@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace _01_Challenge
 {
-    class Program
+    class UserInterface
     {
-        static void Main(string[] args)
+        public void run()
         {
-            UserInterface interface = new UserInterface;
-            interface.Run();
+
         }
     }
 }
