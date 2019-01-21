@@ -25,12 +25,37 @@ We don't need to update the items right now.*/
 
 namespace _01_Challenge
 {
-    class Program
+    public class MenuRepository
     {
-        static void Main(string[] args)
+        List<Menu> _menu = new List<Menu>();
+
+        public void AppendToList(Menu menuItem)
         {
-            UserInterface ui = new UserInterface();
-            ui.Run();
+            _menu.Add(menuItem);
+        }
+
+        public void RemoveFromList(Menu menuItem)
+        {
+            _menu.Remove(menuItem);
+        }
+
+        public void RemoveSpecificItem(int mealNumber)
+        {
+            foreach (Menu menuItem in _menu)
+            {
+                if (menuItem.MealNumber == mealNumber)
+                {
+                    RemoveFromList(menuItem);
+                    break;
+                    
+                }
+
+            }
+        }
+
+        public List<Menu> GetMenuList()
+        {
+            return _menu;
         }
     }
 }

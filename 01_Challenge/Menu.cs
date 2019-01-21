@@ -25,12 +25,27 @@ We don't need to update the items right now.*/
 
 namespace _01_Challenge
 {
-    class Program
+    public class Menu
     {
-        static void Main(string[] args)
+        public int MealNumber { get; set; }
+        public string MealName { get; set; }
+        public string MealDescription { get; set; }
+        public string MealIngredients { get; set; }
+        public decimal MealPrice { get; set; }
+
+        public Menu(int mealNumber, string mealName, string mealDescription, string mealIngredients, decimal mealPrice)
         {
-            UserInterface ui = new UserInterface();
-            ui.Run();
+            MealNumber = mealNumber;
+            MealName = mealName;
+            MealDescription = mealDescription;
+            MealIngredients = mealIngredients;
+            MealPrice = mealPrice;
+
+        }
+
+        public Menu()
+        {
+
         }
     }
 }
