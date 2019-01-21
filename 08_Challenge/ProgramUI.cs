@@ -36,7 +36,7 @@ namespace _08_Challenge
                         AddCustomer();
                         break;
                     default:
-                        return;
+                        break;
                 }
             }
             while (userContinue == true);

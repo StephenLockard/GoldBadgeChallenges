@@ -47,7 +47,6 @@ namespace _01_Challenge
                 {
                     RemoveFromList(menuItem);
                     break;
-                    
                 }
 
             }
