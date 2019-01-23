@@ -146,7 +146,7 @@ namespace _02_challenge
             List<Claim> claimList = _repo.GetList();
             foreach (Claim claim in claimList)
             {
-                Console.WriteLine($"{claim.ClaimID}/) {claim.ClaimType} -- {claim.Description} -- {claim.ClaimAmount} -- {claim.AccidentDate} -- {claim.ClaimDate} {claim.isValid}\n");
+                Console.WriteLine($"{claim.ClaimID}) {claim.ClaimType} -- {claim.Description} -- {claim.ClaimAmount} -- {claim.AccidentDate} -- {claim.ClaimDate} {claim.isValid}\n");
             }
         }
     }
