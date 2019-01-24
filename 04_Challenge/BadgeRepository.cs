@@ -61,9 +61,18 @@ namespace _04_Challenge
 {
     public class BadgeRepository
     {
-        public static void Main()
+        Badge badge = new Badge();
+        Dictionary<int, List<string>> badges = new Dictionary<int, List<string>>();
+        List<string> doors = new List<string>();
+
+        public void AddToDictionary()
         {
-            Dictionary<int, BadgeID> badgeDictionary = new Dictionary<int, BadgeID>();
-       
+            badges.Add(badge.BadgeID, badge.AccessibleDoors);
+        }
+
+        public void AddBadge()
+        {
+           
         }
     }
+}
