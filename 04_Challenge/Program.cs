@@ -63,7 +63,8 @@ namespace _04_Challenge
     {
         static void Main(string[] args)
         {
-            
+            var program = new ProgramUI();
+            program.Run();
         }
     }
 }

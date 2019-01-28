@@ -61,18 +61,35 @@ namespace _04_Challenge
 {
     public class BadgeRepository
     {
-        Badge badge = new Badge();
-        Dictionary<int, List<string>> badges = new Dictionary<int, List<string>>();
-        List<string> doors = new List<string>();
+        Dictionary<int, List<string>> _badges = new Dictionary<int, List<string>>();
 
-        public void AddToDictionary()
+        public void AddBadgeToDictionary(Badge badge)
         {
-            badges.Add(badge.BadgeID, badge.AccessibleDoors);
+            _badges.Add(badge.BadgeID, badge.AccessibleDoors);
         }
 
-        public void AddBadge()
+        public Dictionary<int, List<string>> GetDictionary()
         {
-           
+            return _badges;
+        }
+
+        public void RemoveBadgeFromDictionary(Badge badge)
+        {
+            _badges.Remove(badge.BadgeID);
+        }
+
+        public void RemoveSpecificItem(int badgeMatch)
+        {
+            foreach (KeyValuePair<int,List<string>> badge in _badges)
+            {
+                if (badge.Key == badgeMatch)
+                {
+                    Badge deletedBadge = new Badge();
+                    deletedBadge.BadgeID = badge.Key;
+                    RemoveBadgeFromDictionary(deletedBadge);
+                    break;
+                }
+            }
         }
     }
 }

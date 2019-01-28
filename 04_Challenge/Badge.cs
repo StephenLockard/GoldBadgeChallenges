@@ -69,7 +69,7 @@ namespace _04_Challenge
             BadgeID = badgeID;
             AccessibleDoors = accessibleDoors;
         }
-        
+
         public Badge()
         {
 

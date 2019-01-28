@@ -29,7 +29,7 @@ namespace _03_Challenge
 
         public void Run()
         {
-            bool usercontinue = true;
+            bool userContinue = true;
             do
             {
                 Console.WriteLine("Hello and welcome to the menu editor! Please select an action: \n1) Add new event\n2) See all events\n3) See Costs ");
@@ -53,7 +53,7 @@ namespace _03_Challenge
                         break;
                 }
             }
-            while (usercontinue);
+            while (userContinue);
         }
 
         private void SeeCosts()
