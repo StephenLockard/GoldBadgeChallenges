@@ -129,11 +129,8 @@ Be sure to Unit Test your Repository methods.*/
             {
                 if (badge.Key == userUpdateSelection)
                 {
-                    var updatedBadge = new Badge();
                     var updatedListOfDoors = new List<string>();
 
-                    Console.WriteLine("Badge ID?");
-                    updatedBadge.BadgeID = int.Parse(Console.ReadLine());
                     bool addMoreDoors = true;
                     while (addMoreDoors)
                     {
@@ -145,7 +142,7 @@ Be sure to Unit Test your Repository methods.*/
                         if (userDoorsResponse == "no")
                         {
                             updatedBadge.AccessibleDoors = updatedListOfDoors;
-                            _repo.AddBadgeToDictionary(updatedadge);
+                            _repo.AddBadgeToDictionary(updatedBadge);
                             addMoreDoors = false;
                         }
                     }
